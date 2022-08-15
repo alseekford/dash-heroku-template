@@ -121,7 +121,30 @@ fig_box.update(layout=dict(title=dict(x=0.5)))
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-markdown_text = ''
+markdown_text = """
+   For 50 years, the General Social Survey (GSS) has been conducted to collect and compare trends in opinions, attitudes, and behaviors on contemporary American society. The GSS consists of questions ranging from a demographic, behavioral, to an attitudinal standpoint. More specific topics addressed, for example, are civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events. The majority of the data was collected via face-to-face interviews. However in recent years, computer-assisted personal interviewing (CAPI) and phone interviews, given special circumstances, began. This dataset in particular, consists of seventeen features, or questions asked during the General Social Survey (https://gss.norc.org/faq). These features are as followed: 
+* `id`: a numeric unique ID for each person who responded to the survey
+* `weight`: survey sample weights
+* `sex`: whether the respondent is male or female
+* `education`: years of formal education
+* `region`: region of the country where the respondent lives
+* `age`: age (years)
+* `income`: the respondent's personal annual income
+* `job_prestige`: the respondent's occupational prestige score, as measured by the GSS using the methodology described above
+* `mother_job_prestige`: the respondent's mother's occupational prestige score, as measured by the GSS using the methodology described above
+* `father_job_prestige`: the respondent's father's occupational prestige score, as measured by the GSS using the methodology described above
+* `socioeconomic_index`: an index measuring the respondent's socioeconomic status
+* `satjob`: responses to 'On the whole, how satisfied are you with the work you do?'
+* `relationship`: agree or disagree with: 'A working mother can establish just as warm and secure a relationship with her children as a mother who does not work.'
+* `male_breadwinner`: agree or disagree with: 'It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family.'
+* `men_bettersuited`: agree or disagree with: 'Most men are better suited emotionally for politics than are most women.'
+* `child_suffer`: agree or disagree with: 'A preschool child is likely to suffer if his or her mother works.'
+* `men_overwork`: agree or disagree with: 'Family life often suffers because men concentrate too much on their work.'
+   
+These feature variables will be used in the following visualizations to explore the gender wage gap. 
+
+Although calculated many different ways, the gender wage gap explains the difference in income betweeen men and women in the US. Analyzing the most recent Census Bureau data from 2018, women on average, regrdless of race, only 82 cents for every 1 dollar earned by men (https://www.americanprogress.org/article/quick-facts-gender-wage-gap/). Resulting in a wage gap of 18 cents, this measure is calculated by the ratio of median annual earnings, men compared to women. The visualizations presented in this dashboard will combine what we know about the gender wage gap, combined with social factors from the General Social Survey. 
+"""
 
 # Populate the dashboard 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
